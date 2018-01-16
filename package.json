@@ -1,0 +1,17 @@
+{
+  "name": "Final_PROGECT",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel js/src -d js/dist --presets es2015",
+    "watch": "babel js/src -d js/dist --presets es2015 -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
