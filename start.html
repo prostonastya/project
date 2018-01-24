@@ -14,15 +14,15 @@
     <header>
         <div class="container">
             <div class="headers">
-                <h1><a href="start.html">Template</a></h1>
+                <h1 class="logo"><a href="start.html">Template</a></h1>
+                <h1 class="hidden"><a href="start.html">TL</a></h1>
                 <div class="admin">
                     <span>E-mail</span>
                     <span>sing up</span>
                     <a href="shopping-bag.html"><span class="ic-bag"></span></a>                    
                     <div><a href="shopping-bag.html">Bag <span>(0)</span></a></div>      
                 </div>
-            </div>
-        
+            </div>        
             <nav class="navigate">
                 <ul>
                 <li><a>Women</a></li>
@@ -33,36 +33,67 @@
                 <li><a>New Arrivals</a></li>
                 <li><a>Clearance</a></li>
                 <li><a>Store Locator</a></li>
-                <li class="search"><a>
-                    <input type="search" placeholder="Style Name">
-                    <span class="ic-loupe"></span>
-                </a></li>                    
+                <li class="search">
+                    <form>
+                        <input type="search" placeholder="Style Name">
+                    </form>                    
+                    <a href="#">
+                        <span class="ic-loupe"></span>
+                    </a> 
+                </li>                    
                 </ul>
             </nav>
+            <button class="burger"></button>
+            <div class="header-menu is-hidden">
+                <li><a>Women</a></li>
+                <li><a>Men</a></li>
+                <li><a>Handbags</a></li>
+                <li><a>Accessories</a></li>
+                <li><a>Sale</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Clearance</a></li>
+                <li><a>Store Locator</a></li>
+                <li class="search">
+                    <form>
+                        <input type="search" placeholder="Style Name">
+                    </form>                    
+                    <a href="#">
+                        <span class="ic-loupe"></span>
+                    </a> 
+                </li>
+            </div>
         </div>        
     </header>
     <main>
-        <slider-wrap>
-            <div class="container">                     
-                <div class="slider-img">  
-                    <figure>
-                        <a href=""> <img src="img/slider/slide-1.jpg" alt=""></a>
-                        <a href=""> <img src="img/slider/slide-2.jpg" alt=""></a>
-                        <a href=""> <img src="img/slider/slide-1.jpg" alt=""></a>
-                        <a href=""> <img src="img/slider/slide-3.jpg" alt=""></a>
-                        <a href=""> <img src="img/slider/slide-2.jpg" alt=""></a>                  
-                    </figure>
+        <!-- Slideshow -->
+        <div class="container">
+            <div class="slideshow">
+                <div class="mySlides fade">
+                    <img src="img/slider/slide-1.jpg">                
                 </div>
-                
-                <div class="slide-indicator">
-                    <span class="dot"></span> 
-                    <span class="dot active"></span> 
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                <div class="mySlides fade">
+                    <img src="img/slider/slide-2.jpg">               
                 </div>
-                        
+                <div class="mySlides fade">                
+                    <img src="img/slider/slide-1.jpg">                
+                </div>
+                <div class="mySlides fade">                
+                    <img src="img/slider/slide-3.jpg">                
+                </div>
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <br>
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                </div>
+
             </div>
-        </slider-wrap>
+        </div>
         <div class="main-category">
             <div class="container">
                 <div class="sale-wrap">
@@ -102,12 +133,12 @@
                         <p>Neck Knitted Jumper</p>
                         <span>£76.25</span>
                     </div>
-                    <div class="item">
+                    <div class="item hide-2">
                         <a href="#"><img src="img/arrivals-img-3.jpg" alt="item-arrivals"></a>                        
                         <p>Turtle Neck Jumper in Rib</p>
                         <span class="new-arrivals">£130.25</span>
                     </div>
-                    <div class="item">
+                    <div class="item hide-1">
                         <a href="#"><img src="img/arrivals-img-4.jpg" alt="item-arrivals"></a>                        
                         <p>With Patchwork Crochet</p>
                         <span>£80.60</span>
@@ -118,6 +149,7 @@
         <button class="btn all">All arrivals</button>
     </main>    
     <footer>
+        <hr>
         <div class="main-footer">
             <div class="container">
                 <div class="links width-25">
@@ -141,11 +173,18 @@
                         <li><a href="">Careers</a></li>
                     </ul>
                 </div>
+                <hr class="hr-hide">
                 <div class="questions width-25">
                     <h6>Questions</h6>
                     <span class="ic-tw-grey"></span>
-                    <p>Tweet us @template</p>
+                    <p class="tweet">Tweet us @template</p>
                     <p>We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.</p>
+                    
+                    <div class="phone-none">
+                        <h6>Order by phone</h6>
+                        <input type="tel" name="" value="8-800-409-47-12">
+                    </div>
+                    
                     <span class="ic-fb"></span>
                     <span class="ic-tw"></span>
                 </div>
@@ -158,19 +197,25 @@
         <hr>      
         <div class="last-block">
             <div class="container">
-                <span class="copy">&copy; 2010–2015, The Template Group inc.</span>
-                <span class="share">Share</span>
-                <span class="count">1 437</span>
+                <div class="copy-block">
+                    <span class="copy">&copy; 2010–2015, The Template Group inc.</span>
+                    <span class="share">Share</span>
+                    <span class="count">1 437</span>
+                </div>
+                
                 <ul>
                     <li><a href="">Legal notice </a></li>
                     <li><a href="">Privacy policy</a></li>
                     <li><a href="">Site map</a></li>
+                    <li class="fb">
+                        <span class="ic-fb"></span>
+                        <span class="ic-tw"></span>
+                    </li>
                 </ul>
             </div>            
         </div>        
     </footer>
-
-
-    <!-- <script src="dist/start.js"></script> -->
+    <script src="js/dist/common.js"></script>
+    <script src="js/dist/start.js"></script>
 </body>
 </html>

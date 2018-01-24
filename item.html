@@ -11,35 +11,59 @@
     <title>Item details</title>
 </head>
 <body>
-        <header>
-            <div class="container">
-                <div class="headers">
-                    <h1><a href="start.html">Template</a></h1>
-                    <div class="admin">
-                        <span>E-mail</span>
-                        <span>sing up</span>
-                        <a href="shopping-bag.html"><span class="ic-bag"></span></a>                    
-                        <div><a href="shopping-bag.html">Bag <span>(0)</span></a></div>      
-                    </div>
-                </div>            
-                <nav class="navigate">
-                    <ul>
-                    <li><a>Women</a></li>
-                    <li><a>Men</a></li>
-                    <li><a>Handbags</a></li>
-                    <li><a>Accessories</a></li>
-                    <li><a>Sale</a></li>
-                    <li><a>New Arrivals</a></li>
-                    <li><a>Clearance</a></li>
-                    <li><a>Store Locator</a></li>
-                    <li class="search"><a>
-                        <input type="search" placeholder="Style Name">
-                        <span class="ic-loupe"></span>
-                    </a></li>                    
-                    </ul>
-                </nav>
+    <header>
+        <div class="container">
+            <div class="headers">
+                <h1 class="logo"><a href="start.html">Template</a></h1>
+                <h1 class="hidden"><a href="start.html">TL</a></h1>
+                <div class="admin">
+                    <span>E-mail</span>
+                    <span>sing up</span>
+                    <a href="shopping-bag.html"><span class="ic-bag"></span></a>                    
+                    <div><a href="shopping-bag.html">Bag <span>(0)</span></a></div>      
+                </div>
             </div>        
-        </header>
+            <nav class="navigate">
+                <ul>
+                <li><a>Women</a></li>
+                <li><a>Men</a></li>
+                <li><a>Handbags</a></li>
+                <li><a>Accessories</a></li>
+                <li><a>Sale</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Clearance</a></li>
+                <li><a>Store Locator</a></li>
+                <li class="search">
+                    <form>
+                        <input type="search" placeholder="Style Name">
+                    </form>                    
+                    <a href="#">
+                        <span class="ic-loupe"></span>
+                    </a> 
+                </li>                    
+                </ul>
+            </nav>
+            <button class="burger"></button>
+            <div class="header-menu is-hidden">
+                <li><a>Women</a></li>
+                <li><a>Men</a></li>
+                <li><a>Handbags</a></li>
+                <li><a>Accessories</a></li>
+                <li><a>Sale</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Clearance</a></li>
+                <li><a>Store Locator</a></li>
+                <li class="search">
+                    <form>
+                        <input type="search" placeholder="Style Name">
+                    </form>                    
+                    <a href="#">
+                        <span class="ic-loupe"></span>
+                    </a> 
+                </li>
+            </div>
+        </div>        
+    </header>
     <main>
         <hr>        
         <div class="back-nav">
@@ -67,8 +91,9 @@
                 </div>
                 <div class="description-block">
                     <h4>Dark classic fit suit</h4>
-                    <p>Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs</p>
+                    <p class="visible-dt">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs</p>
                     <div class="prod-price">£<span>180.60</span></div>
+                    <p class="visible-mb">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs</p>
                     <div class="size">
                         <span>Size:</span>
                         <input type="radio" id="radio1" name="radios-one" value="52" checked>
@@ -91,17 +116,24 @@
             </div>
             
         </div>
-        <div class="baner">
-            <div class="container">
-                <div class="baner-big"></div>
-                <div class="baner-small-1"></div>
-                <div class="baner-small-2"></div>
+        <div class="container">
+            <div class="baner">
+                <div class="baner-big">
+                    <img src="img/adidas.jpg" alt="">
+                </div>
+                <div class="baner-small-1">
+                    <img src="img/repair.jpg" alt="">
+                </div>
+                <div class="baner-small-2">
+                    <img src="img/sale.jpg" alt="">
+                </div>
             </div>            
         </div>
 
     </main>
 
     <footer>
+        <hr>
         <div class="main-footer">
             <div class="container">
                 <div class="links width-25">
@@ -125,11 +157,18 @@
                         <li><a href="">Careers</a></li>
                     </ul>
                 </div>
+                <hr class="hr-hide">
                 <div class="questions width-25">
                     <h6>Questions</h6>
                     <span class="ic-tw-grey"></span>
-                    <p>Tweet us @template</p>
+                    <p class="tweet">Tweet us @template</p>
                     <p>We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.</p>
+                    
+                    <div class="phone-none">
+                        <h6>Order by phone</h6>
+                        <input type="tel" name="" value="8-800-409-47-12">
+                    </div>
+                    
                     <span class="ic-fb"></span>
                     <span class="ic-tw"></span>
                 </div>
@@ -139,21 +178,28 @@
                 </div>
             </div>
         </div>
-        <hr>    
+        <hr>      
         <div class="last-block">
             <div class="container">
-                <span class="copy">&copy; 2010–2015, The Template Group inc.</span>
-                <span class="share">Share</span>
-                <span class="count">1 437</span>
+                <div class="copy-block">
+                    <span class="copy">&copy; 2010–2015, The Template Group inc.</span>
+                    <span class="share">Share</span>
+                    <span class="count">1 437</span>
+                </div>
+                
                 <ul>
                     <li><a href="">Legal notice </a></li>
                     <li><a href="">Privacy policy</a></li>
                     <li><a href="">Site map</a></li>
+                    <li class="fb">
+                        <span class="ic-fb"></span>
+                        <span class="ic-tw"></span>
+                    </li>
                 </ul>
             </div>            
         </div>        
     </footer>
-    
+    <script src="js/dist/common.js"></script>    
 </body>
 </html>
 

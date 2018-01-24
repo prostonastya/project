@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
-    <title>Catalog</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+        <title>Catalog</title>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="headers">
-                <h1><a href="start.html">Template</a></h1>
+                <h1 class="logo"><a href="start.html">Template</a></h1>
+                <h1 class="hidden"><a href="start.html">TL</a></h1>
                 <div class="admin">
                     <span>E-mail</span>
                     <span>sing up</span>
                     <a href="shopping-bag.html"><span class="ic-bag"></span></a>                    
-                    <div><a href="shopping-bag.html">Bag <span>(0)</span></a></div>     
+                    <div><a href="shopping-bag.html">Bag <span>(0)</span></a></div>      
                 </div>
-            </div>
-        
+            </div>        
             <nav class="navigate">
                 <ul>
                 <li><a>Women</a></li>
@@ -33,12 +33,35 @@
                 <li><a>New Arrivals</a></li>
                 <li><a>Clearance</a></li>
                 <li><a>Store Locator</a></li>
-                <li class="search"><a>
-                    <input type="search" placeholder="Style Name">
-                    <span class="ic-loupe"></span>
-                </a></li>                    
+                <li class="search">
+                    <form>
+                        <input type="search" placeholder="Style Name">
+                    </form>                    
+                    <a href="#">
+                        <span class="ic-loupe"></span>
+                    </a> 
+                </li>                    
                 </ul>
             </nav>
+            <button class="burger"></button>
+            <div class="header-menu is-hidden">
+                <li><a>Women</a></li>
+                <li><a>Men</a></li>
+                <li><a>Handbags</a></li>
+                <li><a>Accessories</a></li>
+                <li><a>Sale</a></li>
+                <li><a>New Arrivals</a></li>
+                <li><a>Clearance</a></li>
+                <li><a>Store Locator</a></li>
+                <li class="search">
+                    <form>
+                        <input type="search" placeholder="Style Name">
+                    </form>                    
+                    <a href="#">
+                        <span class="ic-loupe"></span>
+                    </a> 
+                </li>
+            </div>
         </div>        
     </header>
     <main>
@@ -46,13 +69,77 @@
             <hr>     
             <div class="container">                          
                 <div class="drop-wrapper">
-                    <ul>
-                        <li><div class="text">Fashion</div> <span>&#9660;</span></li>
-                        <li><div class="text">Product type</div> <span>&#9660;</span></li>
-                        <li><div class="text">Color</div> <span>&#9660;</span></li>
-                        <li><div class="text">Brand</div> <span>&#9660;</span></li>
-                        <li><div class="text">Size</div> <span>&#9660;</span></li>
-                        <li><div class="text">Price range</div> <span>&#9660;</span></li>
+                    <ul class="drop-menu">
+                        <li>                            
+                            <div class="text">Fashion</div> <span>&#9660;</span>
+                            <div class="value"></div>
+                            <ul class="drop-hidden">
+                                <li>Not selected</li>
+                                <li>Nail the 90s</li>
+                                <li>Casual style</li>
+                                <li>New Look</li>
+                                <li>Sport</li>
+                                <li>Vintage</li>
+                                <li>Classical style</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="text">Product type</div> <span>&#9660;</span>
+                            <div class="value"></div>
+                            <ul class="drop-hidden">
+                                <li>Not selected</li>
+                                <li>Coats &amp; Jackets</li>
+                                <li>Dresses</li>
+                                <li>Jersey Tops</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="text">Color</div> <span>&#9660;</span>
+                            <div class="value"></div>
+                            <ul class="drop-hidden">
+                                <li>Not selected</li>
+                                <li>Black</li>
+                                <li>Blue</li>
+                                <li>Red</li>
+                                <li>Green</li>
+                                <li>Golden</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="text">Brand</div> <span>&#9660;</span>
+                            <div class="value"></div>
+                            <ul class="drop-hidden">
+                                <li>Not selected</li>
+                                <li>Chi Chi London</li>
+                                <li>Antipodium</li>
+                                <li>Adidas</li>
+                                <li>New Balance</li>
+                                <li>River Island</li>
+                            </ul>
+                        </li>
+                        <li><div class="text">Size</div> <span>&#9660;</span>
+                            <div class="value"></div>
+                            <ul class="drop-hidden">
+                                <li>Not selected</li>                                
+                                <li>UK 2</li>
+                                <li>UK 18</li>
+                                <li>UK 18L</li>
+                                <li>UK 20</li>
+                                <li>UK 20L</li>
+                                <li>UK 20S</li>                            
+                                <li>UK 22S</li>
+                                <li>UK 22</li>                                
+                            </ul>
+                        </li>
+                        <li><div class="text">Price range</div> <span>&#9660;</span>
+                            <div class="value"></div>
+                            <ul class="drop-hidden">
+                                <li>Not selected</li>                                
+                                <li>To £99</li>
+                                <li>£100-£299</li>
+                                <li>From £300</li>                                                             
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -71,12 +158,12 @@
                         <p>Neck Knitted Jumper</p>
                         <span>£76.25</span>
                     </div>
-                    <div class="item">
+                    <div class="item hide-2">
                         <a href="#"><img src="img/arrivals-img-3.jpg" alt="item-arrivals"></a>                        
                         <p>Turtle Neck Jumper in Rib</p>
                         <span class="new-arrivals">£130.25</span>
                     </div>
-                    <div class="item">
+                    <div class="item hide-1">
                         <a href="#"><img src="img/arrivals-img-4.jpg" alt="item-arrivals"></a>                        
                         <p>With Patchwork Crochet</p>
                         <span>£80.60</span>
@@ -143,8 +230,8 @@
             </div>
         </div>
         <button class="btn more">Show more</button>
-        <div class="baner">
-            <div class="container">
+        <div class="container">
+            <div class="baner">
                 <div class="baner-big">
                     <img src="img/adidas.jpg" alt="">
                 </div>
@@ -159,6 +246,7 @@
     </main>
 
     <footer>
+        <hr>
         <div class="main-footer">
             <div class="container">
                 <div class="links width-25">
@@ -182,11 +270,18 @@
                         <li><a href="">Careers</a></li>
                     </ul>
                 </div>
+                <hr class="hr-hide">
                 <div class="questions width-25">
                     <h6>Questions</h6>
                     <span class="ic-tw-grey"></span>
-                    <p>Tweet us @template</p>
+                    <p class="tweet">Tweet us @template</p>
                     <p>We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.</p>
+                    
+                    <div class="phone-none">
+                        <h6>Order by phone</h6>
+                        <input type="tel" name="" value="8-800-409-47-12">
+                    </div>
+                    
                     <span class="ic-fb"></span>
                     <span class="ic-tw"></span>
                 </div>
@@ -196,19 +291,27 @@
                 </div>
             </div>
         </div>
-        <hr>       
+        <hr>      
         <div class="last-block">
             <div class="container">
-                <span class="copy">&copy; 2010–2015, The Template Group inc.</span>
-                <span class="share">Share</span>
-                <span class="count">1 437</span>
+                <div class="copy-block">
+                    <span class="copy">&copy; 2010–2015, The Template Group inc.</span>
+                    <span class="share">Share</span>
+                    <span class="count">1 437</span>
+                </div>                
                 <ul>
                     <li><a href="">Legal notice </a></li>
                     <li><a href="">Privacy policy</a></li>
                     <li><a href="">Site map</a></li>
+                    <li class="fb">
+                        <span class="ic-fb"></span>
+                        <span class="ic-tw"></span>
+                    </li>
                 </ul>
             </div>            
         </div>        
     </footer>
+    <script src="js/dist/common.js"></script>
+    <script src="js/dist/catalog.js"></script>
 </body>
 </html>
