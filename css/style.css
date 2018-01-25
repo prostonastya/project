@@ -664,6 +664,11 @@ li.fb{
 	text-align: left;
 	padding-top: 30px;
 }
+.bag-wrap p{
+	text-align: center;
+	margin: 30px;
+	font-size: 20px;
+}
 .item-bag{
 	width: 49%;
 	height: 342px;
@@ -671,6 +676,12 @@ li.fb{
 	font-family: 'Roboto';
 	margin-bottom: 93px;
 	overflow: hidden;
+}
+.min-1, .plus-1{
+	color: #f14a58;
+	font-weight: bold;
+	font-size: 18px;
+	cursor: pointer;
 }
 
 .goods-img{
@@ -716,6 +727,7 @@ li.fb{
 	color: #f14a58;
 	font-weight: bold;
 	font-family: 'Open Sans';
+	cursor: pointer;
 }
 .basket-info{
 	font-size: 12px;
@@ -732,7 +744,10 @@ li.fb{
 	color: #f14a58;
 }
 .empty, .cost{
-	display: inline-block;	
+	display: inline-block;
+}
+.empty{
+	cursor: pointer;
 }
 .cost p{
 	font-weight: bold;

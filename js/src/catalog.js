@@ -7,11 +7,12 @@ for(let i=0; i<hidenMenu.length; i++){
 function selected(){    
     var selectedVal = event.target.innerText;
     var container = event.target.parentNode.parentNode;//li
-    console.log(selectedVal);   
+    console.log('selectedVal', selectedVal);   
     var value = container.getElementsByClassName('value')[0];
-    console.log(value);
-    value.innerText = selectedVal;
-    
-    // var text = container.childNodes[1];
-    // text.style.ccsText = 'margin-top: 0px;';
+    console.log('valuejjjjjjj', value);
+    if(selectedVal == 'Not selected'){
+        value.innerText = '';    
+    } else{
+        value.innerText = selectedVal;
+    }      
 }
