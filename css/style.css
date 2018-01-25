@@ -484,6 +484,12 @@ li.fb{
 	width: 100%;
 	height: 383px;
 }
+span.more{
+	font: 16px 'Times New Roman';
+	font-style: italic;
+	color: #757575;
+}
+
 /* Dropdown menu */
 
 .drop-wrapper{
