@@ -6,6 +6,16 @@ var empty = document.getElementsByClassName('empty')[0];
 var cost = document.getElementsByClassName('cost')[0].childNodes[1];//near buy
 var remove = document.getElementsByClassName('delete');
 
+// polyphyll for remove()
+if (!Element.prototype.remove) {
+    Element.prototype.remove = function remove() {
+        if (this.parentNode) {
+        this.parentNode.removeChild(this);
+        }
+    };
+}
+
+// EventListener for "+" and "-"
 for (let i=0; i< plus.length; i++){
     plus[i].addEventListener('click', plusOne);
     plus[i].addEventListener('click', syncPrice);
@@ -20,7 +30,7 @@ for (let i=0; i< remove.length; i++){
 }
 empty.addEventListener('click', deleteAll);
 
-function plusOne(){
+function plusOne(event){
     let count = event.target.previousSibling;
     let priceContainer = event.target.parentNode.parentNode.parentNode;
     let priceFull = priceContainer.getElementsByClassName('price-bag')[0].innerText;
@@ -32,7 +42,7 @@ function plusOne(){
 
 }
 
-function minus(){
+function minus(event){
     let count = event.target.nextElementSibling;
     console.log(count);
     let priceContainer = event.target.parentNode.parentNode.parentNode;
@@ -62,7 +72,7 @@ function deleteAll(){
 function syncPrice(){
     cost.textContent =  `£${totalCost.textContent}`;
 }
-function deleteItem(){
+function deleteItem(event){
     let item = event.target.parentNode.parentNode.parentNode;
     let row = item.parentNode.children;
     let priceFull = item.children[1].children[1].textContent;

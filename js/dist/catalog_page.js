@@ -4,9 +4,9 @@ var hidenMenu = document.getElementsByClassName('drop-hidden');
 var mainCatalog = document.getElementsByClassName('row')[1];
 // filter catalog item by category and fashion:
 var filteredCatalog = _.filter(window.catalog, { 'category': 'women', 'fashion': 'Casual style' });
-// sort by date(newest first):
+// sort by date:
 var sortDateOld = _.sortBy(filteredCatalog, ['dateAdded']);
-var sortDateNew = [];
+var sortDateNew = []; //(newest first)
 
 for (var i = 0; i < sortDateOld.length; i++) {
     sortDateNew.unshift(sortDateOld[i]);
@@ -18,7 +18,7 @@ for (var _i = 0; _i < hidenMenu.length; _i++) {
     hidenMenu[_i].addEventListener('click', selected);
 }
 
-function selected() {
+function selected(event) {
     var selectedVal = event.target.innerText;
     var container = event.target.parentNode.parentNode; //li    
     var value = container.getElementsByClassName('value')[0];
@@ -55,6 +55,10 @@ for (var _i2 = 0; _i2 < sortDateNew.length; _i2++) {
     var price = document.createElement('span');
     if (sortDateNew[_i2].discountedPrice !== null) {
         price.innerText = '\xA3' + sortDateNew[_i2].discountedPrice;
+
+        if (sortDateNew[_i2].price !== sortDateNew[_i2].discountedPrice) {
+            item.appendChild(calcDiscount(sortDateNew[_i2].price, sortDateNew[_i2].discountedPrice));
+        }
     } else {
         price.innerText = sortDateNew[_i2].placeholder;
         price.classList.add('more');
@@ -65,4 +69,11 @@ for (var _i2 = 0; _i2 < sortDateNew.length; _i2++) {
 
     item.appendChild(price);
     mainCatalog.appendChild(item);
+}
+
+function calcDiscount(price, discPrice) {
+    var discMsg = '\xA3' + price + ' - ' + (100 - discPrice * 100 / price) + '%';
+    var discSpan = document.createElement('span');
+    discSpan.innerText = discMsg;
+    return discSpan;
 }

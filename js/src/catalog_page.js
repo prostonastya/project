@@ -2,23 +2,21 @@ const hidenMenu = document.getElementsByClassName('drop-hidden');
 const mainCatalog =  document.getElementsByClassName('row')[1];
 // filter catalog item by category and fashion:
 const filteredCatalog = _.filter(window.catalog,{'category': 'women', 'fashion': 'Casual style'});
-// sort by date(newest first):
+// sort by date:
 var sortDateOld = _.sortBy(filteredCatalog, ['dateAdded']);
-var sortDateNew = [];
+var sortDateNew = [];//(newest first)
 
 for (let i=0;i < sortDateOld.length; i++){
     sortDateNew.unshift(sortDateOld[i]);
 }
 console.log(sortDateNew);
 
-
-
 // droppdown
 for(let i=0; i<hidenMenu.length; i++){
     hidenMenu[i].addEventListener('click', selected)
 }
 
-function selected(){    
+function selected(event){    
     var selectedVal = event.target.innerText;
     var container = event.target.parentNode.parentNode;//li    
     var value = container.getElementsByClassName('value')[0];    
@@ -28,9 +26,6 @@ function selected(){
         value.innerText = selectedVal;
     }      
 }
-
-
-
 
 // catalog item
 
@@ -57,7 +52,12 @@ for (let i=0; i< sortDateNew.length; i++){
 
     let price = document.createElement('span');
     if (sortDateNew[i].discountedPrice !== null){
-        price.innerText = `£${sortDateNew[i].discountedPrice}`;        
+        price.innerText = `£${sortDateNew[i].discountedPrice}`;
+
+        if(sortDateNew[i].price !== sortDateNew[i].discountedPrice){            
+            item.appendChild(calcDiscount(sortDateNew[i].price, sortDateNew[i].discountedPrice));            
+        }         
+
     } else {
         price.innerText = sortDateNew[i].placeholder;
         price.classList.add('more');
@@ -70,5 +70,11 @@ for (let i=0; i< sortDateNew.length; i++){
     mainCatalog.appendChild(item);
 }
 
+function calcDiscount(price, discPrice){    
+    let discMsg = `£${price} - ${100 - ((discPrice * 100) / price)}%`
+    let discSpan = document.createElement('span');
+    discSpan.innerText = discMsg;
+    return discSpan;
+}
 
 
